@@ -24,9 +24,9 @@ import (
 	"context"
 	"log"
 
-	"github.com/minio/minio-go/v7"
-	"github.com/minio/minio-go/v7/pkg/credentials"
-	"github.com/minio/minio-go/v7/pkg/sse"
+	"github.com/libreFS/librefs-go/v7"
+	"github.com/libreFS/librefs-go/v7/pkg/credentials"
+	"github.com/libreFS/librefs-go/v7/pkg/sse"
 )
 
 func main() {
