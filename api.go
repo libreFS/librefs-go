@@ -39,13 +39,13 @@ import (
 	"time"
 
 	"github.com/dustin/go-humanize"
-	md5simd "github.com/minio/md5-simd"
 	"github.com/libreFS/librefs-go/v7/pkg/credentials"
 	"github.com/libreFS/librefs-go/v7/pkg/kvcache"
 	"github.com/libreFS/librefs-go/v7/pkg/s3utils"
 	"github.com/libreFS/librefs-go/v7/pkg/set"
 	"github.com/libreFS/librefs-go/v7/pkg/signer"
 	"github.com/libreFS/librefs-go/v7/pkg/singleflight"
+	md5simd "github.com/libreFS/md5-simd"
 	"golang.org/x/net/publicsuffix"
 )
 
