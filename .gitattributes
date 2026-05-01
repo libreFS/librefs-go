@@ -1,0 +1,5 @@
+# Normalize line endings to LF for all text files
+* text=auto eol=lf
+
+# Explicitly LF for test data to prevent CRLF breaking byte-for-byte XML comparisons on Windows
+testdata/**  text eol=lf

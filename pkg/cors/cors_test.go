@@ -36,7 +36,7 @@ func TestCORSXMLMarshal(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	trimmedFileContents := bytes.TrimSpace(fileContents)
+	trimmedFileContents := bytes.TrimSpace(bytes.ReplaceAll(fileContents, []byte("\r\n"), []byte("\n")))
 	if !bytes.Equal(trimmedFileContents, remarshalled) {
 		t.Errorf("got: %s, want: %s", string(remarshalled), string(trimmedFileContents))
 	}
