@@ -1,12 +1,12 @@
-# minio-go — libreFS S3 Go SDK
+# librefs-go — libreFS S3 Go SDK
 
 [![Apache V2 License](https://img.shields.io/badge/license-Apache%20V2-blue.svg)](LICENSE)
 
 Go client SDK for [libreFS](https://github.com/libreFS/libreFS) and any Amazon S3-compatible object storage. Forked from `minio/minio-go`.
 
-For a complete list of APIs and examples, see the [godoc documentation](https://pkg.go.dev/github.com/minio/minio-go/v7).
+For a complete list of APIs and examples, see the [godoc documentation](https://pkg.go.dev/github.com/libreFS/librefs-go/v7).
 
-These examples assume a working [Go development environment](https://golang.org/doc/install) and the [`lc` CLI tool](https://github.com/libreFS/mc).
+These examples assume a working [Go development environment](https://golang.org/doc/install) and the [`lc` CLI tool](https://github.com/libreFS/librefs-cli).
 
 Install
 -------
@@ -14,7 +14,7 @@ Install
 From your project directory:
 
 ```sh
-go get github.com/minio/minio-go/v7
+go get github.com/libreFS/librefs-go/v7
 ```
 
 Initialize a Client Object
@@ -31,8 +31,8 @@ package main
 import (
 	"log"
 
-	"github.com/minio/minio-go/v7"
-	"github.com/minio/minio-go/v7/pkg/credentials"
+	"github.com/libreFS/librefs-go/v7"
+	"github.com/libreFS/librefs-go/v7/pkg/credentials"
 )
 
 func main() {
@@ -68,8 +68,8 @@ import (
 	"context"
 	"log"
 
-	"github.com/minio/minio-go/v7"
-	"github.com/minio/minio-go/v7/pkg/credentials"
+	"github.com/libreFS/librefs-go/v7"
+	"github.com/libreFS/librefs-go/v7/pkg/credentials"
 )
 
 func main() {
@@ -126,8 +126,8 @@ dd if=/dev/urandom of=/tmp/testdata bs=2048 count=10
 
 ```sh
 go mod init example/FileUploader
-go get github.com/minio/minio-go/v7
-go get github.com/minio/minio-go/v7/pkg/credentials
+go get github.com/libreFS/librefs-go/v7
+go get github.com/libreFS/librefs-go/v7/pkg/credentials
 go run FileUploader.go
 ```
 
@@ -140,57 +140,57 @@ lc ls myserver/testbucket
 API Reference
 -------------
 
-Full API reference: [pkg.go.dev/github.com/minio/minio-go/v7](https://pkg.go.dev/github.com/minio/minio-go/v7)
+Full API reference: [pkg.go.dev/github.com/libreFS/librefs-go/v7](https://pkg.go.dev/github.com/libreFS/librefs-go/v7)
 
 ### Bucket Operations
 
-- [`MakeBucket`](https://pkg.go.dev/github.com/minio/minio-go/v7#Client.MakeBucket)
-- [`ListBuckets`](https://pkg.go.dev/github.com/minio/minio-go/v7#Client.ListBuckets)
-- [`BucketExists`](https://pkg.go.dev/github.com/minio/minio-go/v7#Client.BucketExists)
-- [`RemoveBucket`](https://pkg.go.dev/github.com/minio/minio-go/v7#Client.RemoveBucket)
-- [`ListObjects`](https://pkg.go.dev/github.com/minio/minio-go/v7#Client.ListObjects)
-- [`ListIncompleteUploads`](https://pkg.go.dev/github.com/minio/minio-go/v7#Client.ListIncompleteUploads)
+- [`MakeBucket`](https://pkg.go.dev/github.com/libreFS/librefs-go/v7#Client.MakeBucket)
+- [`ListBuckets`](https://pkg.go.dev/github.com/libreFS/librefs-go/v7#Client.ListBuckets)
+- [`BucketExists`](https://pkg.go.dev/github.com/libreFS/librefs-go/v7#Client.BucketExists)
+- [`RemoveBucket`](https://pkg.go.dev/github.com/libreFS/librefs-go/v7#Client.RemoveBucket)
+- [`ListObjects`](https://pkg.go.dev/github.com/libreFS/librefs-go/v7#Client.ListObjects)
+- [`ListIncompleteUploads`](https://pkg.go.dev/github.com/libreFS/librefs-go/v7#Client.ListIncompleteUploads)
 
 ### Bucket Policy Operations
 
-- [`SetBucketPolicy`](https://pkg.go.dev/github.com/minio/minio-go/v7#Client.SetBucketPolicy)
-- [`GetBucketPolicy`](https://pkg.go.dev/github.com/minio/minio-go/v7#Client.GetBucketPolicy)
+- [`SetBucketPolicy`](https://pkg.go.dev/github.com/libreFS/librefs-go/v7#Client.SetBucketPolicy)
+- [`GetBucketPolicy`](https://pkg.go.dev/github.com/libreFS/librefs-go/v7#Client.GetBucketPolicy)
 
 ### Bucket Notification Operations
 
-- [`SetBucketNotification`](https://pkg.go.dev/github.com/minio/minio-go/v7#Client.SetBucketNotification)
-- [`GetBucketNotification`](https://pkg.go.dev/github.com/minio/minio-go/v7#Client.GetBucketNotification)
-- [`RemoveAllBucketNotification`](https://pkg.go.dev/github.com/minio/minio-go/v7#Client.RemoveAllBucketNotification)
-- [`ListenBucketNotification`](https://pkg.go.dev/github.com/minio/minio-go/v7#Client.ListenBucketNotification)
-- [`ListenNotification`](https://pkg.go.dev/github.com/minio/minio-go/v7#Client.ListenNotification)
+- [`SetBucketNotification`](https://pkg.go.dev/github.com/libreFS/librefs-go/v7#Client.SetBucketNotification)
+- [`GetBucketNotification`](https://pkg.go.dev/github.com/libreFS/librefs-go/v7#Client.GetBucketNotification)
+- [`RemoveAllBucketNotification`](https://pkg.go.dev/github.com/libreFS/librefs-go/v7#Client.RemoveAllBucketNotification)
+- [`ListenBucketNotification`](https://pkg.go.dev/github.com/libreFS/librefs-go/v7#Client.ListenBucketNotification)
+- [`ListenNotification`](https://pkg.go.dev/github.com/libreFS/librefs-go/v7#Client.ListenNotification)
 
 ### File Object Operations
 
-- [`FPutObject`](https://pkg.go.dev/github.com/minio/minio-go/v7#Client.FPutObject)
-- [`FGetObject`](https://pkg.go.dev/github.com/minio/minio-go/v7#Client.FGetObject)
+- [`FPutObject`](https://pkg.go.dev/github.com/libreFS/librefs-go/v7#Client.FPutObject)
+- [`FGetObject`](https://pkg.go.dev/github.com/libreFS/librefs-go/v7#Client.FGetObject)
 
 ### Object Operations
 
-- [`GetObject`](https://pkg.go.dev/github.com/minio/minio-go/v7#Client.GetObject)
-- [`PutObject`](https://pkg.go.dev/github.com/minio/minio-go/v7#Client.PutObject)
-- [`StatObject`](https://pkg.go.dev/github.com/minio/minio-go/v7#Client.StatObject)
-- [`CopyObject`](https://pkg.go.dev/github.com/minio/minio-go/v7#Client.CopyObject)
-- [`RemoveObject`](https://pkg.go.dev/github.com/minio/minio-go/v7#Client.RemoveObject)
-- [`RemoveObjects`](https://pkg.go.dev/github.com/minio/minio-go/v7#Client.RemoveObjects)
-- [`SelectObjectContent`](https://pkg.go.dev/github.com/minio/minio-go/v7#Client.SelectObjectContent)
+- [`GetObject`](https://pkg.go.dev/github.com/libreFS/librefs-go/v7#Client.GetObject)
+- [`PutObject`](https://pkg.go.dev/github.com/libreFS/librefs-go/v7#Client.PutObject)
+- [`StatObject`](https://pkg.go.dev/github.com/libreFS/librefs-go/v7#Client.StatObject)
+- [`CopyObject`](https://pkg.go.dev/github.com/libreFS/librefs-go/v7#Client.CopyObject)
+- [`RemoveObject`](https://pkg.go.dev/github.com/libreFS/librefs-go/v7#Client.RemoveObject)
+- [`RemoveObjects`](https://pkg.go.dev/github.com/libreFS/librefs-go/v7#Client.RemoveObjects)
+- [`SelectObjectContent`](https://pkg.go.dev/github.com/libreFS/librefs-go/v7#Client.SelectObjectContent)
 
 ### Presigned Operations
 
-- [`PresignedGetObject`](https://pkg.go.dev/github.com/minio/minio-go/v7#Client.PresignedGetObject)
-- [`PresignedPutObject`](https://pkg.go.dev/github.com/minio/minio-go/v7#Client.PresignedPutObject)
-- [`PresignedHeadObject`](https://pkg.go.dev/github.com/minio/minio-go/v7#Client.PresignedHeadObject)
-- [`PresignedPostPolicy`](https://pkg.go.dev/github.com/minio/minio-go/v7#Client.PresignedPostPolicy)
+- [`PresignedGetObject`](https://pkg.go.dev/github.com/libreFS/librefs-go/v7#Client.PresignedGetObject)
+- [`PresignedPutObject`](https://pkg.go.dev/github.com/libreFS/librefs-go/v7#Client.PresignedPutObject)
+- [`PresignedHeadObject`](https://pkg.go.dev/github.com/libreFS/librefs-go/v7#Client.PresignedHeadObject)
+- [`PresignedPostPolicy`](https://pkg.go.dev/github.com/libreFS/librefs-go/v7#Client.PresignedPostPolicy)
 
 ### Client Settings
 
-- [`SetAppInfo`](https://pkg.go.dev/github.com/minio/minio-go/v7#Client.SetAppInfo)
-- [`TraceOn`](https://pkg.go.dev/github.com/minio/minio-go/v7#Client.TraceOn)
-- [`TraceOff`](https://pkg.go.dev/github.com/minio/minio-go/v7#Client.TraceOff)
+- [`SetAppInfo`](https://pkg.go.dev/github.com/libreFS/librefs-go/v7#Client.SetAppInfo)
+- [`TraceOn`](https://pkg.go.dev/github.com/libreFS/librefs-go/v7#Client.TraceOn)
+- [`TraceOff`](https://pkg.go.dev/github.com/libreFS/librefs-go/v7#Client.TraceOff)
 
 Full Examples
 -------------
